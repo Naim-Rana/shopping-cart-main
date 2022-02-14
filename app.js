@@ -2,5 +2,5 @@ document.getElementById("case-plus").addEventListener("click",function(){
     console.log("clicked case plus button.");
     const caseInput = document.getElementById("case-number");
     const caseNumber = caseInput.value;
-    console.log(caseNumber);
+    caseInput.value =parseInt(caseNumber)+ 1;
 })
