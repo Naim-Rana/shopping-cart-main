@@ -1,13 +1,17 @@
+function updateProductNumber(product,isIncreasing){
+    const productInput = document.getElementById(product+"-number");
+    const productNumber = productInput.value;
+    if(isIncreasing == true){
+        productInput.value =parseInt(productNumber)+ 1;
+    }
+    else if(productNumber > 0){
+        productInput.value = parseInt(productNumber) - 1;
+    }
+}
 document.getElementById("case-plus").addEventListener("click",function(){
-    console.log("clicked case plus button.");
-    const caseInput = document.getElementById("case-number");
-    const caseNumber = caseInput.value;
-    caseInput.value =parseInt(caseNumber)+ 1;
+    updateProductNumber("case",true);
 });
 
 document.getElementById("case-minus").addEventListener("click",function(){
-    console.log("clicked case-minus button ");
-    const caseInput = document.getElementById("case-number");
-    const caseNumber = caseInput.value;
-    caseInput.value = parseInt(caseNumber)-1;
+    updateProductNumber("case",false);
 })
